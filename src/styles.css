@@ -53,14 +53,14 @@ body {
 .start-button {
   background-color: transparent;
   border: 3px solid #16d9e3;
+  margin-top: 50px;
   border-radius: 15px;
   cursor: pointer;
   font-family: inherit;
   padding: 0.5rem 1rem;
-  margin-top: 20px;
-  font-size: 1.5rem;
-  width: 170px;
-  height: 70px;
+  font-size: 2.5rem;
+  width: 200px;
+  height: 100px;
   color: #16d9e3;
 }
 
@@ -71,7 +71,28 @@ body {
 }
 
 .timer {
-    font-size: 2.0rem;
-    margin-top: 20px;
+    margin-top: 50px;
+    font-size: 4.0rem;
     color: red;
+}
+
+.board {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background: lightgoldenrodyellow;
+  box-shadow: -4px -4px 10px #2a333d, 5px 4px 10px #475462;
+  border-radius: 30px;
+  overflow: hidden;
+  display: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
 }

@@ -1,6 +1,5 @@
 import {Module} from '../core/module'
-import { getRandomColor } from '../utils'
-import { createButton } from '../utils'
+import { getRandomNumber,getRandomColor, createButton} from '../utils'
 
 export class ClicksModule extends Module {
     trigger() {
@@ -16,18 +15,26 @@ export class ClicksModule extends Module {
         
         const timer = document.createElement('span')
         timer.className = 'timer'
+        const board = document.createElement('div')
+        board.className = 'board'
+        board.style.display = 'block'
+        
         setTime(time)
         
-        document.body.append(createButton(),timer)
+        document.body.append(createButton(),timer,board)
 
         const startBtn = document.querySelector('.start-button')
         startBtn.addEventListener('click', event => {
             event.preventDefault()
             startGame()
-            document.body.addEventListener('click', event => {
-               if(event) score++
-               console.log(score)
-            })
+        })
+
+        board.addEventListener('click', event => {
+            if (event.target.classList.contains('circle')) {
+                score++
+                event.target.remove()
+                createRandomCircle()
+            }
         })
 
         function setTime(value) {
@@ -36,22 +43,41 @@ export class ClicksModule extends Module {
 
         function startGame() {
             setInterval(decreaseTime, 1000)
+            createRandomCircle()
             setTime(time)
         }
+
 
         function decreaseTime() {
             if (time === 0) {
                 finishGame()
             } else {
                 let currentTime = --time
+                if (currentTime < 10) {
+                currentTime = `0${currentTime}`
+                }
                 setTime(currentTime)
                 }
         }
 
+        function createRandomCircle() {
+            const circle = document.createElement('div')
+            const size = getRandomNumber(10,60)
+            const {width, height} = board.getBoundingClientRect()
+            const x = getRandomNumber(0, width - size)
+            const y = getRandomNumber(0, height - size)
+            circle.classList.add('circle')
+            circle.style.width = `${size}px`
+            circle.style.height = `${size}px`
+            circle.style.top = `${y}px`
+            circle.style.left = `${x}px`
+            circle.style.backgroundColor = getRandomColor()
+            board.append(circle)
+        }
+
         function finishGame() {
-            console.log(score)
-            // timeEl.parentNode.remove()
-            // board.innerHTML = `<h1>Счёт: <span class="primary">${score}</span></h1>`
+            board.style.display = 'none'
+            timer.innerHTML = `<h2>Счёт: <span>${score}</span></h2>`
         }
     }
 }
