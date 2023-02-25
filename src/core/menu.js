@@ -9,7 +9,7 @@ export class Menu {
     })
   }
 
-  open() {
+  open() { 
     throw new Error(`"open" method should be implemented in Menu"`)
   }
 
