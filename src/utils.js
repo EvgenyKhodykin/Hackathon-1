@@ -20,3 +20,12 @@ export function createMenuList(array, container) {
     
     return container
 }
+
+export function greeting() {
+    const h1 = document.createElement('h1')
+    h1.className = 'greeting'
+    h1.innerHTML = `Привет! Небольшая игра для тебя. Вызывай контекстное меню правой кнопкой мыши и выбирай один из пунктов <span>&#129303</span>`
+    h1.style.color = getRandomColor()
+
+    return h1
+}

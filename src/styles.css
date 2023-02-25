@@ -40,3 +40,9 @@ body {
 .menu .menu-item:hover {
     background: #343434;
 }
+
+.greeting {
+    text-align: center;
+    font-size: 45px;
+    display: block;
+}
