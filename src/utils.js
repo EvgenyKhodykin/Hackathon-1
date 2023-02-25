@@ -29,3 +29,11 @@ export function greeting() {
 
     return h1
 }
+
+export function createButton() {
+    const button = document.createElement('button')
+    button.className = 'start-button'
+    button.innerText = 'Старт'
+
+    return button
+}
