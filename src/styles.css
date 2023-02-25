@@ -12,6 +12,9 @@ body {
     height: 100vh;
     width: 100%;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu {
@@ -45,4 +48,30 @@ body {
     text-align: center;
     font-size: 45px;
     display: block;
+}
+
+.start-button {
+  background-color: transparent;
+  border: 3px solid #16d9e3;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  margin-top: 20px;
+  font-size: 1.5rem;
+  width: 170px;
+  height: 70px;
+  color: #16d9e3;
+}
+
+.start-button:hover {
+  border: 2px solid #16d9e3;
+  color: #16d9e3;
+  scale: 1.2;
+}
+
+.timer {
+    font-size: 2.0rem;
+    margin-top: 20px;
+    color: red;
 }
