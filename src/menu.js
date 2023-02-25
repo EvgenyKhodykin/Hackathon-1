@@ -20,7 +20,8 @@ export class ContextMenu extends Menu {
         const handlerClick = (event) => {
             const clickedItem = event.target.closest('.menu-item')
             const itemDataValue = clickedItem.dataset.type
-            console.log(itemDataValue)
+            const currentItem = this.modules.filter(module => module.type === itemDataValue)[0]
+            currentItem.trigger()
         }    
 
         document.body.addEventListener('contextmenu', openContextMenu)
