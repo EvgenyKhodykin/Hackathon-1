@@ -4,11 +4,7 @@ import { getRandomNumber,getRandomColor, createButton} from '../utils'
 export class ClicksModule extends Module {
     constructor(type,text) {
         super(type,text)
-        // this.greeting = document.querySelector('.greeting')
-        // this.quoteDiv = document.querySelector('.quote')
-        // this.timer = document.querySelector('.timer')
-        // this.board = document.querySelector('.board')
-        // this.button = document.querySelector('.start-button')
+        this.greeting = document.querySelector('.greeting')
     }    
 
     trigger() {
