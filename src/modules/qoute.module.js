@@ -8,6 +8,7 @@ export class QuoteModule extends Module {
         this.quoteText = document.querySelector('.quoteText')
         this.quoteAuthor = document.querySelector('.quoteAuthor')
         this.greeting = document.querySelector('.greeting')
+        this.shapeDiv = document.querySelector('.shape')
         this.startBtn = document.querySelector('.start-button')
         this.timer = document.querySelector('.timer')
         this.board = document.querySelector('.board')
@@ -40,6 +41,7 @@ export class QuoteModule extends Module {
         this.quoteText.innerText = ''
         this.quoteAuthor.innerText = ''
         this.startBtn.style.display = 'none'
+        this.shapeDiv.style.display = 'none'
         this.timer.style.display = 'none'
         this.board.style.display = 'none'
         const randomElement = Math.floor(Math.random() * this.quotes.length)

@@ -10,15 +10,16 @@ export class ClicksModule extends Module {
         this.startBtn = document.querySelector('.start-button')
         this.timer = document.querySelector('.timer')
         this.board = document.querySelector('.board')
+        this.shapeDiv = document.querySelector('.shape')
     }    
 
     trigger() {
         this.quoteText.innerText = ''
+        this.shapeDiv.style.display = 'none'
         this.quoteAuthor.innerText = ''
         this.startBtn.style.display = 'block'
         this.board.style.display = 'block'
         this.greeting.style.color = 'black'
-        this.timer.innerHTML = ''
         this.greeting.innerHTML = `Сейчас твоя задача сделать максимальное количество кликов по кружку внутри доски за 10 секунд &#128521`
         
         let time = 10

@@ -42,6 +42,7 @@ body {
 
 .menu .menu-item:hover {
     background: #343434;
+    border: 1px solid white;
 }
 
 .greeting {
@@ -52,7 +53,7 @@ body {
 
 .start-button {
   background-color: transparent;
-  border: 3px solid #16d9e3;
+  border: 3px solid red;
   margin-top: 50px;
   border-radius: 15px;
   cursor: pointer;
@@ -61,13 +62,14 @@ body {
   font-size: 2.5rem;
   width: 200px;
   height: 100px;
-  color: #16d9e3;
+  color: red;
   display: none;
 }
 
 .start-button:hover {
-  border: 2px solid #16d9e3;
-  color: #16d9e3;
+  border: 2px solid red;
+  background-color: red;
+  color: black;
   scale: 1.2;
 }
 
@@ -106,4 +108,10 @@ body {
   font-size: large;
   font-weight: bold;
   position: absolute;
+}
+
+.shape {
+  display: flex;
+  position: absolute;
+  display: none;
 }

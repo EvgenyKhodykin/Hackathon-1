@@ -64,4 +64,10 @@ export function createBoard() {
     return board
 }
 
+export function createShape() {
+    const shapeDiv = document.createElement('div')
+    shapeDiv.className = 'shape'
+
+    return shapeDiv
+}
 
