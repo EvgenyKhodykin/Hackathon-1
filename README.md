@@ -1,2 +1,1 @@
-# Hackaton #1 :)
-# Hello my friend ^_^
+# Hackaton #1
