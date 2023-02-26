@@ -19,6 +19,7 @@ export class ClicksModule extends Module {
         this.quoteAuthor.innerText = ''
         this.startBtn.style.display = 'block'
         this.board.style.display = 'block'
+        this.timer.innerHTML = ''
         this.greeting.style.color = 'black'
         this.greeting.innerHTML = `Сейчас твоя задача сделать максимальное количество кликов по кружку внутри доски за 10 секунд &#128521`
         
@@ -50,16 +51,16 @@ export class ClicksModule extends Module {
         const setTime = (value) => {
             this.timer.innerHTML = `00:${value}`
         }
-        
-        const startGame = () => {
-            setInterval(decreaseTime, 1000)
+
+         const startGame = () => {
+            window.intervalTimer = setInterval(decreaseTime, 1000)
             createRandomCircle()
             setTime(time)
         }
 
         const decreaseTime = () => {
             if (time === 0) {
-                clearInterval(this.timer)
+                clearInterval(intervalTimer)
                 finishGame()
             } else {
                 let currentTime = --time
@@ -69,6 +70,9 @@ export class ClicksModule extends Module {
                 setTime(currentTime)
                 }
         }
+        
+         
+       
 
         this.startBtn.addEventListener('click', event => {
             event.preventDefault()

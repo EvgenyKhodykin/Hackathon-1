@@ -9,6 +9,7 @@ export class ShapeModule extends Module {
         this.greeting = document.querySelector('.greeting')
         this.quoteText = document.querySelector('.quoteText')
         this.quoteAuthor = document.querySelector('.quoteAuthor')
+        this.timer = document.querySelector('.timer')
         this.shapes = shapesArray
     }    
     
@@ -16,6 +17,7 @@ export class ShapeModule extends Module {
        this.greeting.innerText = ''
        this.quoteText.innerText = ''
        this.quoteAuthor.innerText = ''
+       this.timer.innerText = ''
        this.shapeDiv.style.display = 'block'
        const randomElement = Math.floor(Math.random() * this.shapes.length)
        this.shapeDiv.innerHTML = this.shapes[randomElement]
