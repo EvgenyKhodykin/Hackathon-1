@@ -96,3 +96,13 @@ body {
   border-radius: 50%;
   cursor: pointer;
 }
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-style: italic;
+  font-size: large;
+  font-weight: bold;
+  position: absolute;
+}

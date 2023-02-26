@@ -2,16 +2,21 @@ import {Module} from '../core/module'
 import { getRandomNumber,getRandomColor, createButton} from '../utils'
 
 export class ClicksModule extends Module {
+    constructor(type,text) {
+        super(type,text)
+        // this.greeting = document.querySelector('.greeting')
+        // this.quoteDiv = document.querySelector('.quote')
+        // this.timer = document.querySelector('.timer')
+        // this.board = document.querySelector('.board')
+        // this.button = document.querySelector('.start-button')
+    }    
+
     trigger() {
         let time = 10
         let score = 0
 
-        document.body.style.backgroundColor = '#fff'   
-        
-        const greeting = document.querySelector('.greeting')
-        greeting.style.display = 'block'
-        greeting.style.color = 'black'
-        greeting.innerHTML = `Сейчас твоя задача сделать максимальное количество кликов по кружку внутри доски за 10 секунд &#128521`
+        this.greeting.style.color = 'black'
+        this.greeting.innerHTML = `Сейчас твоя задача сделать максимальное количество кликов по кружку внутри доски за 10 секунд &#128521`
         
         const timer = document.createElement('span')
         timer.className = 'timer'
