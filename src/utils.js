@@ -71,3 +71,9 @@ export function createShape() {
     return shapeDiv
 }
 
+export function createCat() {
+    const catDiv = document.createElement('div')
+    catDiv.className = 'square'
+
+    return catDiv
+}

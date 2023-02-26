@@ -25,6 +25,7 @@ body {
     border-radius: 5px;
     display: none;
     list-style: none;
+    border-radius: 8px;
 }
 
 .menu.open {
@@ -34,10 +35,9 @@ body {
 .menu .menu-item {
     padding: 8px 10px;
     font-size: 1rem;
-    color: #eee;
+    color: #fff;
     cursor: pointer;
-    transition: background-color .2s ease-in;
-    border-radius: inherit;
+    border-radius: 8px;
 }
 
 .menu .menu-item:hover {
@@ -115,3 +115,15 @@ body {
   position: absolute;
   display: none;
 }
+
+.square {
+    display: flex;
+    position: absolute;
+    background-size: cover;
+    background-image: url(./images/fat-cat-laser-eyes.gif);
+    border-radius: 20px;
+    height: 600px;
+    width: 400px;
+    display: none;
+}
+

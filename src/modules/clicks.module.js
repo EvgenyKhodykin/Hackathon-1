@@ -7,6 +7,7 @@ export class ClicksModule extends Module {
         this.greeting = document.querySelector('.greeting')
         this.quoteText = document.querySelector('.quoteText')
         this.quoteAuthor = document.querySelector('.quoteAuthor')
+        this.catDiv = document.querySelector('.square')
         this.startBtn = document.querySelector('.start-button')
         this.timer = document.querySelector('.timer')
         this.board = document.querySelector('.board')
@@ -16,6 +17,7 @@ export class ClicksModule extends Module {
     trigger() {
         this.quoteText.innerText = ''
         this.shapeDiv.style.display = 'none'
+        this.catDiv.style.display = 'none'
         this.quoteAuthor.innerText = ''
         this.startBtn.style.display = 'block'
         this.board.style.display = 'block'

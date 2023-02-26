@@ -6,6 +6,7 @@ export class ShapeModule extends Module {
     constructor(type,text) {
         super(type,text)
         this.shapeDiv = document.querySelector('.shape')
+        this.catDiv = document.querySelector('.square')
         this.greeting = document.querySelector('.greeting')
         this.quoteText = document.querySelector('.quoteText')
         this.quoteAuthor = document.querySelector('.quoteAuthor')
@@ -15,6 +16,7 @@ export class ShapeModule extends Module {
     
     trigger() {
        this.greeting.innerText = ''
+       this.catDiv.style.display = 'none'
        this.quoteText.innerText = ''
        this.quoteAuthor.innerText = ''
        this.timer.innerText = ''

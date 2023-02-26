@@ -7,6 +7,7 @@ export class QuoteModule extends Module {
         this.quoteDiv = document.querySelector('.quote')
         this.quoteText = document.querySelector('.quoteText')
         this.quoteAuthor = document.querySelector('.quoteAuthor')
+        this.catDiv = document.querySelector('.square')
         this.greeting = document.querySelector('.greeting')
         this.shapeDiv = document.querySelector('.shape')
         this.startBtn = document.querySelector('.start-button')
@@ -41,6 +42,7 @@ export class QuoteModule extends Module {
         this.quoteText.innerText = ''
         this.quoteAuthor.innerText = ''
         this.startBtn.style.display = 'none'
+        this.catDiv.style.display = 'none'
         this.shapeDiv.style.display = 'none'
         this.timer.style.display = 'none'
         this.board.style.display = 'none'
