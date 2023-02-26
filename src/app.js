@@ -4,10 +4,10 @@ import { ClicksModule } from './modules/clicks.module'
 import { BackgroundModule } from './modules/background.module'
 import { ShapeModule } from './modules/shape.module'
 import { QuoteModule } from './modules/qoute.module'
-import { greeting } from './utils'
+import { createGreeting,createQuote,createBtn,createTimer,createBoard } from './utils'
 
 
-document.body.prepend(greeting())
+document.body.append(createGreeting(),createQuote(),createBtn(),createTimer(),createBoard())
 const click = new ClicksModule('clicks','Посчитать клики')
 const background = new BackgroundModule('background','Изменить цвет фона')
 const shape = new ShapeModule('shape','Создать фигуру')

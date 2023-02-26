@@ -4,13 +4,13 @@ import { getRandomNumber,getRandomColor } from '../utils'
 export class QuoteModule extends Module {
     constructor(type,text) {
         super(type,text)
-        this.URL_QUOTES = "https://gist.githubusercontent.com/nasrulhazim/54b659e43b1035215cd0ba1d4577ee80/raw/e3c6895ce42069f0ee7e991229064f167fe8ccdc/quotes.json"
-        this.quoteDiv = document.createElement('div')
-        this.quoteDiv.className = 'quote'
-        this.quoteSpan = document.createElement('span')
-        this.authorSpan = document.createElement('span')
-        this.quoteDiv.append(this.quoteSpan,this.authorSpan)
+        this.quoteDiv = document.querySelector('.quote')
+        this.quoteText = document.querySelector('.quoteText')
+        this.quoteAuthor = document.querySelector('.quoteAuthor')
         this.greeting = document.querySelector('.greeting')
+        this.startBtn = document.querySelector('.start-button')
+        this.timer = document.querySelector('.timer')
+        this.board = document.querySelector('.board')
         this.quotes = [
             {
                 text: "Life isn’t about getting and having, it’s about giving and being.",
@@ -36,13 +36,18 @@ export class QuoteModule extends Module {
     }
     
     trigger() {
-        this.greeting.style.display = 'none'
-        document.body.append(this.quoteDiv)
+        this.greeting.innerText = ''
+        this.quoteText.innerText = ''
+        this.quoteAuthor.innerText = ''
+        this.startBtn.style.display = 'none'
+        this.timer.style.display = 'none'
+        this.board.style.display = 'none'
         const randomElement = Math.floor(Math.random() * this.quotes.length)
-        this.quoteSpan.innerText = `"${this.quotes[randomElement].text}"`
-        this.authorSpan.innerText = this.quotes[randomElement].author
+        this.quoteText.innerText = `"${this.quotes[randomElement].text}"`
+        this.quoteAuthor.innerText = this.quotes[randomElement].author
         this.quoteDiv.style.color = getRandomColor()
-        this.quoteDiv.style.top = `${getRandomNumber(50,1000)}px`
+        this.quoteDiv.style.top = `${getRandomNumber(50,500)}px`
         this.quoteDiv.style.left = `${getRandomNumber(50,1000)}px`
     } 
 }
+ 

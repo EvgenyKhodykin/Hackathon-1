@@ -62,6 +62,7 @@ body {
   width: 200px;
   height: 100px;
   color: #16d9e3;
+  display: none;
 }
 
 .start-button:hover {
