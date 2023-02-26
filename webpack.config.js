@@ -54,6 +54,10 @@ module.exports = (env, argv) => {
           use: [MiniCssExtractPlugin.loader, "css-loader"],
         },
         {
+          test: /\.mp3$/,
+          loader: 'file-loader'
+        },
+        {
           test: /\.m?js$/,
           exclude: /node_modules/,
           use: {

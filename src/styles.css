@@ -12,6 +12,9 @@ body {
     height: 100vh;
     width: 100%;
     padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .menu {
@@ -22,6 +25,7 @@ body {
     border-radius: 5px;
     display: none;
     list-style: none;
+    border-radius: 8px;
 }
 
 .menu.open {
@@ -31,12 +35,95 @@ body {
 .menu .menu-item {
     padding: 8px 10px;
     font-size: 1rem;
-    color: #eee;
+    color: #fff;
     cursor: pointer;
-    transition: background-color .2s ease-in;
-    border-radius: inherit;
+    border-radius: 8px;
 }
 
 .menu .menu-item:hover {
     background: #343434;
+    border: 1px solid white;
 }
+
+.greeting {
+    text-align: center;
+    font-size: 45px;
+    display: block;
+}
+
+.start-button {
+  background-color: transparent;
+  border: 3px solid red;
+  margin-top: 50px;
+  border-radius: 15px;
+  cursor: pointer;
+  font-family: inherit;
+  padding: 0.5rem 1rem;
+  font-size: 2.5rem;
+  width: 200px;
+  height: 100px;
+  color: red;
+  display: none;
+}
+
+.start-button:hover {
+  border: 2px solid red;
+  background-color: red;
+  color: black;
+  scale: 1.2;
+}
+
+.timer {
+    margin-top: 50px;
+    font-size: 4.0rem;
+    color: red;
+}
+
+.board {
+  display: flex;
+  margin-top: 50px;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  width: 500px;
+  height: 500px;
+  background: lightgoldenrodyellow;
+  box-shadow: -4px -4px 10px #2a333d, 5px 4px 10px #475462;
+  border-radius: 30px;
+  overflow: hidden;
+  display: none;
+}
+
+.circle {
+  position: absolute;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.quote {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  font-style: italic;
+  font-size: large;
+  font-weight: bold;
+  position: absolute;
+}
+
+.shape {
+  display: flex;
+  position: absolute;
+  display: none;
+}
+
+.square {
+    display: flex;
+    position: absolute;
+    background-size: cover;
+    background-image: url(./images/fat-cat-laser-eyes.gif);
+    border-radius: 20px;
+    height: 600px;
+    width: 400px;
+    display: none;
+}
+
